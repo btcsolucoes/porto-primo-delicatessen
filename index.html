@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porto Primo Delicatessen | Cardapio Digital</title>
+    <meta name="description" content="Cardapio digital Porto Primo Delicatessen. Padaria, buffet de cafe da manha, almoco e jantar.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Nunito+Sans:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body data-theme="manha">
+    <div class="menu-shell">
+      <header class="cover" id="inicio" aria-label="Porto Primo Delicatessen">
+        <img class="cover-bg" src="assets/porto-primo-logo.png" alt="" aria-hidden="true" fetchpriority="high">
+        <div class="cover-inner">
+          <p class="cover-kicker">Cardapio digital</p>
+          <img class="cover-logo" src="assets/porto-primo-logo-cutout.png" alt="Porto Primo Delicatessen" width="1205" height="791" fetchpriority="high">
+        </div>
+      </header>
+
+      <nav class="tab-dock" aria-label="Categorias do cardapio">
+        <button class="tab is-active" type="button" role="tab" aria-selected="true" aria-controls="manha" data-theme="manha">
+          <span>01</span><b>Cafe da Manha</b>
+        </button>
+        <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="almoco" data-theme="almoco">
+          <span>02</span><b>Almoco</b>
+        </button>
+        <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="jantar" data-theme="jantar">
+          <span>03</span><b>Jantar</b>
+        </button>
+        <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="bebidas" data-theme="bebidas">
+          <span>04</span><b>Bebidas</b>
+        </button>
+        <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="info" data-theme="info">
+          <span>05</span><b>Info</b>
+        </button>
+      </nav>
+
+      <main class="tab-panels">
+        <section class="panel" id="manha" role="tabpanel">
+          <div class="section-head">
+            <span>Buffet matinal</span>
+            <h1>Cafe da Manha</h1>
+            <p>Estacoes de padaria, itens regionais, frutas, frios e bebidas quentes para comecar o dia.</p>
+          </div>
+          <div class="subtabs" role="tablist" aria-label="Categorias do cafe da manha">
+            <button class="subtab is-active" type="button" data-target="manha-buffet">Buffet</button>
+            <button class="subtab" type="button" data-target="manha-paes">Paes</button>
+            <button class="subtab" type="button" data-target="manha-regionais">Regionais</button>
+            <button class="subtab" type="button" data-target="manha-proteinas">Proteinas</button>
+            <button class="subtab" type="button" data-target="manha-doces">Doces e frutas</button>
+            <button class="subtab" type="button" data-target="manha-bebidas">Bebidas</button>
+          </div>
+          <div class="subpanel is-active" id="manha-buffet">
+            <div class="menu-grid">
+              <article class="menu-item"><span>Base</span><h3>Buffet de cafe da manha</h3><p>Selecao diaria com paes, bolos, frutas, frios e acompanhamentos.</p></article>
+              <article class="menu-item"><span>Montagem</span><h3>Mesa de frios</h3><p>Queijos, presuntos, peito de peru, manteiga, requeijao e geleias.</p></article>
+              <article class="menu-item"><span>Quente</span><h3>Estacao regional</h3><p>Cuscuz, macaxeira, inhame e ovos preparados para acompanhar.</p></article>
+            </div>
+          </div>
+          <div class="subpanel" id="manha-paes" hidden>
+            <div class="menu-grid">
+              <article class="menu-item"><span>Padaria</span><h3>Pao frances</h3><p>Classico de fornada para montar com frios, manteiga ou queijo.</p></article>
+              <article class="menu-item"><span>Padaria</span><h3>Pao de queijo</h3><p>Porcao quente para acompanhar cafe ou chocolate.</p></article>
+              <article class="menu-item"><span>Leve</span><h3>Torradas e integrais</h3><p>Opcoes para combinacoes com geleias, queijos e pastas.</p></article>
+            </div>
+          </div>
+          <div class="subpanel" id="manha-regionais" hidden>
+            <div class="menu-grid">
+              <article class="menu-item"><span>Regional</span><h3>Cuscuz</h3><p>Servido com manteiga, queijo, ovos ou charque conforme disponibilidade.</p></article>
+              <article class="menu-item"><span>Raizes</span><h3>Macaxeira e inhame</h3><p>Itens de cafe regional para acompanhar proteinas e frios.</p></article>
+              <article class="menu-item"><span>Chapa</span><h3>Tapiocas</h3><p>Opcoes simples e recheadas para o cafe da manha.</p></article>
+            </div>
+          </div>
+          <div class="subpanel" id="manha-proteinas" hidden>
+            <div class="menu-grid">
+              <article class="menu-item"><span>Ovos</span><h3>Ovos mexidos</h3><p>Preparo classico para acompanhar paes e cuscuz.</p></article>
+              <article class="menu-item"><span>Regional</span><h3>Charque acebolada</h3><p>Opcao intensa para montar prato de cafe regional.</p></article>
+              <article class="menu-item"><span>Frios</span><h3>Queijos e embutidos</h3><p>Selecao de queijos, presunto e peito de peru.</p></article>
+            </div>
+          </div>
+          <div class="subpanel" id="manha-doces" hidden>
+            <div class="menu-grid">
+              <article class="menu-item"><span>Bolos</span><h3>Bolos caseiros</h3><p>Sabores rotativos para acompanhar cafe coado ou cappuccino.</p></article>
+              <article class="menu-item"><span>Frutas</span><h3>Frutas selecionadas</h3><p>Melancia, mamao, banana, melao e outras frutas da estacao.</p></article>
+              <article class="menu-item"><span>Doce</span><h3>Geleias e mel</h3><p>Acompanhamentos para paes, torradas, queijos e bolos.</p></article>
+            </div>
+          </div>
+          <div class="subpanel" id="manha-bebidas" hidden>
+            <div class="menu-grid">
+              <article class="menu-item"><span>Cafe</span><h3>Cafe coado</h3><p>Servido no padrao da casa.</p></article>
+              <article class="menu-item"><span>Leite</span><h3>Cafe com leite</h3><p>Classico matinal para acompanhar itens de padaria.</p></article>
+              <article class="menu-item"><span>Sucos</span><h3>Sucos de frutas</h3><p>Sabores rotativos conforme disponibilidade.</p></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" id="almoco" role="tabpanel">
+          <div class="section-head">
+            <span>Buffet do dia</span>
+            <h2>Almoco</h2>
+            <p>Comida de buffet com proteinas, massas, guarnicoes, saladas e acompanhamentos de delicatessen.</p>
+          </div>
+          <div class="subtabs" role="tablist" aria-label="Categorias do almoco">
+            <button class="subtab is-active" type="button" data-target="almoco-buffet">Buffet</button>
+            <button class="subtab" type="button" data-target="almoco-proteinas">Proteinas</button>
+            <button class="subtab" type="button" data-target="almoco-massas">Massas</button>
+            <button class="subtab" type="button" data-target="almoco-guarnicoes">Guarnicoes</button>
+            <button class="subtab" type="button" data-target="almoco-saladas">Saladas</button>
+            <button class="subtab" type="button" data-target="almoco-acomp">Acompanhamentos</button>
+          </div>
+          <div class="subpanel is-active" id="almoco-buffet">
+            <div class="menu-grid">
+              <article class="menu-item"><span>Servico</span><h3>Buffet de almoco</h3><p>Selecao diaria com pratos quentes, saladas, massas e acompanhamentos.</p></article>
+              <article class="menu-item"><span>Rotativo</span><h3>Pratos do dia</h3><p>Receitas variam conforme producao e disponibilidade da cozinha.</p></article>
+              <article class="menu-item"><span>Completo</span><h3>Mesa de saladas</h3><p>Folhas, legumes, graos e molhos para montar o prato.</p></article>
+            </div>
+          </div>
+          <div class="subpanel" id="almoco-proteinas" hidden>
+            <div class="menu-grid">
+              <article class="menu-item"><span>Aves</span><h3>Frango grelhado</h3><p>Opcao leve para combinacoes com arroz, salada e legumes.</p></article>
+              <article class="menu-item"><span>Aves</span><h3>Frango a parmegiana</h3><p>Classico de buffet com molho, queijo e acompanhamento quente.</p></article>
+              <article class="menu-item"><span>Carne</span><h3>Carne de panela</h3><p>Proteina caseira para acompanhar arroz, feijao e guarnicoes.</p></article>
+              <article class="menu-item"><span>Peixes</span><h3>Peixe ao molho</h3><p>Opcao rotativa para dias de buffet com frutos do mar ou pescados.</p></article>
+            </div>
+          </div>
+          <div class="subpanel" id="almoco-massas" hidden>
+            <div class="menu-grid">
+              <article class="menu-item"><span>Massas</span><h3>Penne ao molho</h3><p>Massa curta com molho do dia.</p></article>
+              <article class="menu-item"><span>Massas</span><h3>Lasanha</h3><p>Versoes rotativas conforme producao da cozinha.</p></article>
+              <article class="menu-item"><span>Molhos</span><h3>Bolonhesa e branco</h3><p>Molhos classicos para massas do buffet.</p></article>
+            </div>
+          </div>
+          <div class="subpanel" id="almoco-guarnicoes" hidden>
+            <div class="menu-grid">
+              <article class="menu-item"><span>Arroz</span><h3>Arroz branco</h3><p>Base tradicional do almoco.</p></article>
+              <article class="menu-item"><span>Graos</span><h3>Feijao do dia</h3><p>Preparo caseiro para acompanhar pratos quentes.</p></article>
+              <article class="menu-item"><span>Quente</span><h3>Pure de batata</h3><p>Guarnicao cremosa para carnes, aves e peixes.</p></article>
+              <article class="menu-item"><span>Legumes</span><h3>Legumes salteados</h3><p>Selecao de legumes da casa.</p></article>
+            </div>
+          </div>
+          <div class="subpanel" id="almoco-saladas" hidden>
+            <div class="menu-grid">
+              <article class="menu-item"><span>Folhas</span><h3>Mix de folhas</h3><p>Folhas frescas para montagem do prato.</p></article>
+              <article class="menu-item"><span>Legumes</span><h3>Tomate, cenoura e pepino</h3><p>Itens frios para saladas simples.</p></article>
+              <article class="menu-item"><span>Graos</span><h3>Grao-de-bico e lentilha</h3><p>Opcoes de salada fria conforme disponibilidade.</p></article>
+            </div>
+          </div>
+          <div class="subpanel" id="almoco-acomp" hidden>
+            <div class="menu-grid">
+              <article class="menu-item"><span>Farofa</span><h3>Farofa da casa</h3><p>Acompanhamento seco para pratos quentes.</p></article>
+              <article class="menu-item"><span>Molhos</span><h3>Molhos para salada</h3><p>Molhos rotativos para a mesa fria.</p></article>
+              <article class="menu-item"><span>Extra</span><h3>Batata rustica</h3><p>Guarnicao quente conforme producao do dia.</p></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" id="jantar" role="tabpanel">
+          <div class="section-head">
+            <span>Fim de tarde e noite</span>
+            <h2>Jantar</h2>
+            <p>Opcoes quentes, lanches de delicatessen, sopas e preparos leves para o atendimento noturno.</p>
+          </div>
+          <div class="subtabs" role="tablist" aria-label="Categorias do jantar">
+            <button class="subtab is-active" type="button" data-target="jantar-quentes">Pratos quentes</button>
+            <button class="subtab" type="button" data-target="jantar-sopas">Sopas</button>
+            <button class="subtab" type="button" data-target="jantar-lanches">Lanches</button>
+            <button class="subtab" type="button" data-target="jantar-saladas">Saladas</button>
+            <button class="subtab" type="button" data-target="jantar-doces">Sobremesas</button>
+          </div>
+          <div class="subpanel is-active" id="jantar-quentes">
+            <div class="menu-grid">
+              <article class="menu-item"><span>Buffet</span><h3>Pratos quentes</h3><p>Selecao noturna com receitas leves e acompanhamentos.</p></article>
+              <article class="menu-item"><span>Massas</span><h3>Massas ao molho</h3><p>Massas rotativas para jantar pratico.</p></article>
+              <article class="menu-item"><span>Proteina</span><h3>Frango ou carne do dia</h3><p>Preparos conforme producao da cozinha.</p></article>
+            </div>
+          </div>
+          <div class="subpanel" id="jantar-sopas" hidden>
+            <div class="menu-grid">
+              <article class="menu-item"><span>Sopa</span><h3>Caldo verde</h3><p>Opcao classica para o jantar.</p></article>
+              <article class="menu-item"><span>Sopa</span><h3>Canja</h3><p>Sopa leve com frango, arroz e legumes.</p></article>
+              <article class="menu-item"><span>Creme</span><h3>Creme de legumes</h3><p>Preparos rotativos da cozinha.</p></article>
+            </div>
+          </div>
+          <div class="subpanel" id="jantar-lanches" hidden>
+            <div class="menu-grid">
+              <article class="menu-item"><span>Chapa</span><h3>Misto quente</h3><p>Pao, queijo e presunto.</p></article>
+              <article class="menu-item"><span>Sanduiche</span><h3>Sanduiche natural</h3><p>Opcao fria com recheios da casa.</p></article>
+              <article class="menu-item"><span>Salgado</span><h3>Salgados assados</h3><p>Itens de vitrine para consumo rapido.</p></article>
+            </div>
+          </div>
+          <div class="subpanel" id="jantar-saladas" hidden>
+            <div class="menu-grid">
+              <article class="menu-item"><span>Leve</span><h3>Salada completa</h3><p>Folhas, legumes, graos e proteina do dia.</p></article>
+              <article class="menu-item"><span>Frios</span><h3>Frios e queijos</h3><p>Montagens frias de delicatessen.</p></article>
+              <article class="menu-item"><span>Molhos</span><h3>Molhos da casa</h3><p>Acompanhamentos para saladas e sanduiches.</p></article>
+            </div>
+          </div>
+          <div class="subpanel" id="jantar-doces" hidden>
+            <div class="menu-grid">
+              <article class="menu-item"><span>Doce</span><h3>Tortas fatia</h3><p>Sabores disponiveis na vitrine.</p></article>
+              <article class="menu-item"><span>Doce</span><h3>Pudim</h3><p>Sobremesa classica de delicatessen.</p></article>
+              <article class="menu-item"><span>Padaria</span><h3>Bolos caseiros</h3><p>Fatias de bolo para acompanhar cafe.</p></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel" id="bebidas" role="tabpanel">
+          <div class="section-head">
+            <span>Cafes, sucos e geladas</span>
+            <h2>Bebidas</h2>
+            <p>Bebidas para cafe da manha, almoco, jantar e lanches de padaria.</p>
+          </div>
+          <div class="subtabs" role="tablist" aria-label="Categorias de bebidas">
+            <button class="subtab is-active" type="button" data-target="bebidas-cafes">Cafes</button>
+            <button class="subtab" type="button" data-target="bebidas-sucos">Sucos</button>
+            <button class="subtab" type="button" data-target="bebidas-frias">Geladas</button>
+            <button class="subtab" type="button" data-target="bebidas-vitaminas">Vitaminas</button>
+          </div>
+          <div class="subpanel is-active" id="bebidas-cafes">
+            <div class="menu-grid">
+              <article class="menu-item"><span>Cafe</span><h3>Expresso</h3><p>Cafe curto de cafeteria.</p></article>
+              <article class="menu-item"><span>Cafe</span><h3>Cappuccino</h3><p>Opcao cremosa para acompanhar doces e bolos.</p></article>
+              <article class="menu-item"><span>Cafe</span><h3>Cafe com leite</h3><p>Classico para padaria e cafe da manha.</p></article>
+            </div>
+          </div>
+          <div class="subpanel" id="bebidas-sucos" hidden>
+            <div class="menu-grid">
+              <article class="menu-item"><span>Natural</span><h3>Suco de laranja</h3><p>Opcao classica e refrescante.</p></article>
+              <article class="menu-item"><span>Natural</span><h3>Suco de acerola</h3><p>Sabores rotativos conforme disponibilidade.</p></article>
+              <article class="menu-item"><span>Polpa</span><h3>Suco de fruta</h3><p>Consulte sabores do dia.</p></article>
+            </div>
+          </div>
+          <div class="subpanel" id="bebidas-frias" hidden>
+            <div class="menu-grid">
+              <article class="menu-item"><span>Agua</span><h3>Agua mineral</h3><p>Com ou sem gas.</p></article>
+              <article class="menu-item"><span>Refrigerante</span><h3>Refrigerantes</h3><p>Latas e garrafas conforme disponibilidade.</p></article>
+              <article class="menu-item"><span>Cha</span><h3>Chas gelados</h3><p>Opcoes prontas para consumo.</p></article>
+            </div>
+          </div>
+          <div class="subpanel" id="bebidas-vitaminas" hidden>
+            <div class="menu-grid">
+              <article class="menu-item"><span>Fruta</span><h3>Vitamina de banana</h3><p>Preparada com leite.</p></article>
+              <article class="menu-item"><span>Fruta</span><h3>Vitamina de mamao</h3><p>Opcao leve para cafe ou lanche.</p></article>
+              <article class="menu-item"><span>Mista</span><h3>Vitamina da casa</h3><p>Combinacao conforme frutas disponiveis.</p></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel info-panel" id="info" role="tabpanel">
+          <div class="section-head">
+            <span>Atendimento</span>
+            <h2>Informacoes</h2>
+          </div>
+          <div class="info-grid">
+            <article><span>Endereco</span><strong>Galeria Aldeia Boulevard</strong><p>Estrada de Aldeia - KM 9,5</p></article>
+            <article><span>Horario</span><strong>08h - 20h</strong><p>Buffet e padaria durante o funcionamento da casa.</p></article>
+            <article><span>WhatsApp</span><strong>(81) 3459-3424</strong><p><a href="https://wa.me/558134593424" target="_blank" rel="noreferrer">Chamar no WhatsApp</a></p></article>
+            <article><span>Instagram</span><strong>@portoprimodelicatessen</strong><p><a href="https://instagram.com/portoprimodelicatessen" target="_blank" rel="noreferrer">Abrir perfil</a></p></article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="menu-footer">
+        <div class="product-badge" aria-label="Um produto QrStack">
+          <span class="product-copy">Um produto</span>
+          <img class="qrstack-mark" src="assets/qrstack-mark.png" alt="" aria-hidden="true">
+          <img class="qrstack-wordmark" src="assets/qrstack-wordmark.png" alt="QrStack">
+        </div>
+        <div class="footer-brand">
+          <strong>Porto Primo Delicatessen</strong>
+          <span>Galeria Aldeia Boulevard</span>
+        </div>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
