@@ -41,13 +41,13 @@ body {
   color: var(--ink);
   font-family: var(--text);
   background:
-    linear-gradient(135deg, rgba(255, 248, 231, 0.78) 0 25%, transparent 25% 50%, rgba(255, 248, 231, 0.52) 50% 75%, transparent 75%) 0 0 / 28px 28px,
-    radial-gradient(ellipse at top, rgba(242, 233, 106, 0.18), transparent 28rem),
+    radial-gradient(ellipse at 12% 12%, rgba(242, 233, 106, 0.18), transparent 28rem),
+    radial-gradient(ellipse at 88% 24%, rgba(184, 103, 37, 0.14), transparent 24rem),
     linear-gradient(180deg, #f6ead1 0%, #fff9ec 44%, #f1dfbd 100%);
 }
 
 body::before {
-  content: "PORTO PRIMO  DELICATESSEN  PADARIA";
+  content: "PORTO PRIMO  DELICATESSEN";
   position: fixed;
   inset: auto auto 8vh -10vw;
   z-index: -1;
@@ -172,6 +172,16 @@ a {
   box-shadow: 0 14px 28px rgba(55, 34, 22, 0.1);
   backdrop-filter: blur(14px);
   scrollbar-width: none;
+}
+
+body.nav-is-fixed .tab-dock {
+  position: fixed;
+  inset: 0 0 auto;
+  width: 100%;
+}
+
+body.nav-is-fixed .tab-panels {
+  padding-top: calc(var(--dock-height, 86px) + 26px);
 }
 
 .tab-dock::-webkit-scrollbar,
