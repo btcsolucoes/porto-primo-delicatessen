@@ -98,7 +98,8 @@ a {
   position: relative;
   display: grid;
   place-items: center;
-  width: 100%;
+  width: calc(100% + 36px);
+  margin: 0 -18px;
   min-height: 100svh;
   overflow: hidden;
   isolation: isolate;
@@ -446,6 +447,11 @@ body.nav-is-fixed .tab-panels {
   .cover-inner {
     width: 100%;
     padding-inline: 10px;
+  }
+
+  .cover {
+    width: 100%;
+    margin: 0;
   }
 
   .cover-logo {
