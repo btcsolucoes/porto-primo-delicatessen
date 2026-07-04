@@ -44,6 +44,8 @@ body {
     radial-gradient(ellipse at 12% 12%, rgba(242, 233, 106, 0.18), transparent 28rem),
     radial-gradient(ellipse at 88% 24%, rgba(184, 103, 37, 0.14), transparent 24rem),
     linear-gradient(180deg, #f6ead1 0%, #fff9ec 44%, #f1dfbd 100%);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body::before {
@@ -140,6 +142,12 @@ a {
   padding: clamp(18px, 4vw, 36px);
 }
 
+.cover-inner picture {
+  display: block;
+  width: min(92vw, 980px);
+  max-height: 76svh;
+}
+
 .cover-kicker {
   color: var(--honey);
   font-family: var(--text);
@@ -152,8 +160,9 @@ a {
 }
 
 .cover-logo {
-  width: min(92vw, 980px);
-  max-height: 76svh;
+  width: 100%;
+  height: auto;
+  max-height: inherit;
   object-fit: contain;
   filter: drop-shadow(0 22px 38px rgba(31, 18, 11, 0.36));
 }
@@ -173,6 +182,8 @@ a {
   box-shadow: 0 14px 28px rgba(55, 34, 22, 0.1);
   backdrop-filter: blur(14px);
   scrollbar-width: none;
+  scroll-padding-inline: 12px;
+  touch-action: pan-x pan-y;
 }
 
 body.nav-is-fixed .tab-dock {
@@ -201,6 +212,7 @@ body.nav-is-fixed .tab-panels {
   border: 1px solid rgba(55, 34, 22, 0.12);
   border-radius: 8px;
   transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+  scroll-snap-align: start;
 }
 
 .tab:hover {
@@ -306,6 +318,8 @@ body.nav-is-fixed .tab-panels {
   overflow-x: auto;
   overscroll-behavior-x: contain;
   scrollbar-width: none;
+  scroll-padding-inline: 16px;
+  touch-action: pan-x pan-y;
 }
 
 .subtab {
@@ -321,6 +335,7 @@ body.nav-is-fixed .tab-panels {
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(55, 34, 22, 0.13);
   border-radius: 8px;
+  scroll-snap-align: start;
 }
 
 .subtab.is-active {
@@ -454,19 +469,24 @@ body.nav-is-fixed .tab-panels {
     margin: 0;
   }
 
+  .cover-inner picture {
+    width: min(86vw, 390px);
+    max-height: 62svh;
+  }
+
   .cover-logo {
-    width: min(84vw, 390px);
     max-width: 100%;
-    max-height: 68svh;
   }
 
   .tab-dock {
-    padding-inline: 12px;
+    gap: 8px;
+    padding: 10px 12px;
   }
 
   .tab {
-    flex-basis: 142px;
-    min-height: 62px;
+    flex-basis: clamp(126px, 38vw, 146px);
+    min-height: 60px;
+    padding: 9px 12px;
   }
 
   .tab b {
@@ -475,7 +495,41 @@ body.nav-is-fixed .tab-panels {
 
   .panel {
     width: calc(100vw - 24px);
-    padding: 22px 16px;
+    padding: 22px 15px;
+    scroll-margin-top: calc(var(--dock-height, 82px) + 18px);
+  }
+
+  .section-head {
+    margin-bottom: 20px;
+  }
+
+  .section-head h1,
+  .section-head h2 {
+    font-size: clamp(2.15rem, 12vw, 3.05rem);
+  }
+
+  .section-head p,
+  .menu-item p,
+  .info-grid p,
+  .footer-brand span {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .subtabs {
+    gap: 8px;
+    margin-inline: -3px;
+    padding: 2px 3px 10px;
+  }
+
+  .subtab {
+    min-height: 46px;
+    padding: 10px 15px;
+    font-size: 0.78rem;
+  }
+
+  .menu-grid {
+    gap: 12px;
   }
 
   .menu-grid,
@@ -485,6 +539,11 @@ body.nav-is-fixed .tab-panels {
 
   .menu-item {
     min-height: 0;
+    padding: 17px 16px;
+  }
+
+  .menu-item h3 {
+    font-size: clamp(1.3rem, 7vw, 1.62rem);
   }
 
   .menu-footer {
@@ -504,7 +563,7 @@ body.nav-is-fixed .tab-panels {
   }
 
   .subtab {
-    max-width: 72vw;
+    max-width: 76vw;
     padding-inline: 15px;
     font-size: 0.8rem;
   }

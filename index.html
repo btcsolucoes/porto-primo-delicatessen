@@ -13,10 +13,13 @@
   <body data-theme="manha">
     <div class="menu-shell">
       <header class="cover" id="inicio" aria-label="Porto Primo Delicatessen">
-        <img class="cover-bg" src="assets/porto-primo-logo.png" alt="" aria-hidden="true" fetchpriority="high">
+        <img class="cover-bg" src="assets/hero-bg-mobile.webp" srcset="assets/hero-bg-mobile.webp 900w, assets/hero-bg-desktop.webp 1800w" sizes="100vw" alt="" aria-hidden="true" fetchpriority="high">
         <div class="cover-inner">
           <p class="cover-kicker">Cardápio digital</p>
-          <img class="cover-logo" src="assets/porto-primo-logo-cutout.png" alt="Porto Primo Delicatessen" width="1205" height="791" fetchpriority="high">
+          <picture>
+            <source srcset="assets/hero-logo-mobile.webp 720w, assets/hero-logo-desktop.webp 1200w" sizes="(max-width: 760px) 86vw, min(92vw, 980px)" type="image/webp">
+            <img class="cover-logo" src="assets/porto-primo-logo-cutout.png" alt="Porto Primo Delicatessen" width="1205" height="791" fetchpriority="high">
+          </picture>
         </div>
       </header>
 
